@@ -18,7 +18,7 @@ const SkillsMob: React.FC<SkillsMobProps> = (props) => {
 
   return (
     <Box id="Skills" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-    <CustomTitle>Moje "skilly"</CustomTitle>
+    <CustomTitle>Moje 'skilly'</CustomTitle>
     <Grid sx={{alignItems:"center", justifyContent:"center"}} container>
          {skillsData?.map((SkillData, id) => (
           <Card key={id} sx={{width: "140px", backgroundColor: "transparent",margin: "0.2rem" }} className={style.skillDataMob}>

@@ -31,7 +31,7 @@ const Skill: React.FC<SkillProps> = (props) => {
   return (
     <div>        
        <BoxRoot id="Skills" sx={{display: {xs: "none", sm: "block"}}}>
-      <CustomTitle>Moje "skilly"</CustomTitle>
+      <CustomTitle>Moje 'skilly'</CustomTitle>
       <Box className={style.boxSkill}>
       <Swiper
         className={style.slides}
