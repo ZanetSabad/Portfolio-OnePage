@@ -1,0 +1,34 @@
+.container{
+    position: relative; 
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.img {
+    transition: 0.5s;
+}
+
+.caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    border: 2px solid red;
+}
+
+.container:hover .caption{
+    background-color: rgba(194, 181, 72, 0.8);
+    transform: translateX(0);
+    transition: all 0.5s linear;
+}
+
+.container:hover .img{
+    transform: scale(1.15) rotate(20deg);
+}

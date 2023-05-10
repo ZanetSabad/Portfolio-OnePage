@@ -1,0 +1,82 @@
+.slide{
+    /* height: 14vh; */
+    /* width: 30vw; */
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  
+  .slides{
+    margin-top: 60px;
+    cursor: pointer;
+   
+  }
+  
+  .slides::before,
+  .slides::after {
+    z-index: 2;
+    content: "";
+    display: block;
+    position: absolute;
+    left:50%;
+    translate: -50% 0%;
+    width: 800vw;
+    height: 802vw;
+    background-image: linear-gradient(90deg, #3D4D76 35%, #385176 100%);
+    border-radius: 50%;
+    border: 4px solid #2e4d76
+
+  }
+  
+  .slides::before{
+    top: -799vw;
+  }
+  
+  .slides::after {
+    bottom: -799vw;
+  }
+
+@media (max-width: 1200px) {
+    .slides::before,
+    .slides::after { 
+      height: 800vw;
+    }
+  }
+
+@media (max-width: 700px) {
+    .boxSkill{ 
+      display: none;
+    }
+  }
+
+  /* **********************************************************SwipeIconKeywrames.tsx****************************************** */
+  .panToll{
+    animation: 1s rotate infinite;
+    animation-direction: alternate
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(20deg);
+    }
+    to {
+      transform: rotate(-20deg);
+    }
+  }
+
+/* ****************************************************************SkillMob.tsx************************************************* */
+.skillDataMob{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s linear;
+  border: 2px solid  #2C2642;
+}
+
+.skillDataMob:hover{
+  transform: scale(0.9);
+  background-color: #2f3e6d;
+}
