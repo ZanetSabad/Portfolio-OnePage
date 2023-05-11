@@ -29,7 +29,7 @@ const Portfolio: React.FC <PortfolioProps> = (props) => {
             margin: 'auto',
             maxWidth: 1240,
             flexGrow: 1,
-            backgroundColor: "transparent"
+            backgroundColor: "transparent",
           }}
         > 
         <CustomTitle>Portfolio</CustomTitle>

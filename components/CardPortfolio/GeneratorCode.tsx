@@ -23,7 +23,7 @@ const GeneratorCode: React.FC<GeneratorCodeProps> = (props) => {
                     <Image src="/images/logo/css.png" alt="CSS" width={80} height={80}></Image>               
                     <Image src="/images/logo/django.png" alt="Django" width={80} height={80}></Image>               
                 </Box>
-                <Link href="../EfectVlna/index.html" style={{color: "black"}}>Náhled</Link>
+                <Link href=""  target='_blank'  style={{color: "black"}}>Náhled - zatím není k dispozici</Link>
             </Card>
         </Card>
     </>

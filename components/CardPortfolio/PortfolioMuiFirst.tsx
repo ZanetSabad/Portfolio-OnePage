@@ -24,7 +24,7 @@ const PortfolioMuiFirst: React.FC<PortfolioMuiFirstProps> = (props) => {
                     <Image src="/images/logo/react.png" alt="React" width={80} height={80}></Image>               
                     <Image src="/images/logo/material_ui.png" alt="Material UI" width={80} height={80}></Image>                
                 </Box>
-                <Link href="https://portfolio-strankovani.vercel.app/" style={{color: "black"}}>Náhled</Link>
+                <Link href="https://portfolio-strankovani.vercel.app/"  target='_blank' style={{color: "black"}}>Náhled</Link>
             </Card>
         </Card>
     </>

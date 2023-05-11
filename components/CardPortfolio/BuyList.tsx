@@ -23,7 +23,7 @@ const BuyList: React.FC<BuyListProps> = (props) => {
                     <Image src="/images/logo/css.png" alt="CSS" width={80} height={80}></Image>               
                     <Image src="/images/logo/react.png" alt="React" width={80} height={80}></Image>               
                 </Box>
-                <Link href="https://aplikace-ukoly-2wdh.vercel.app/" style={{color: "black"}}>Náhled</Link>
+                <Link href="https://aplikace-ukoly-2wdh.vercel.app/"  target='_blank' style={{color: "black"}}>Náhled</Link>
             </Card>
         </Card>
     </>

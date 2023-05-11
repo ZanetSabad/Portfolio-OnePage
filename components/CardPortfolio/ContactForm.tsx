@@ -24,7 +24,7 @@ const ContactForm: React.FC<ContactFormProps> = (props) => {
                     <Image src="/images/logo/php.png" alt="PHP" width={80} height={80}></Image>               
                     
                 </Box>
-                <Link href="https://contact-form-fawn.vercel.app/" style={{color: "black"}}>Náhled</Link>
+                <Link href="https://contact-form-fawn.vercel.app/"  target='_blank'  style={{color: "black"}}>Náhled</Link>
             </Card>
         </Card>
     </>
