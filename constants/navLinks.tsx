@@ -7,34 +7,34 @@ export interface NavLink {
   href: string;
   label: string;
   Icon: React.ReactNode;
-  order: number;
+  id: number;
 }
 
 const navLinks: NavLink[] = [
 
 {
-  href: '#AboutMe',
+  href: '/#AboutMe',
   label: 'O mně',
   Icon: <KeyboardArrowDownIcon />,
-  order: 1,
+  id: 1,
 },
 {
-  href: '#Skills',
+  href: '/#Skills',
   label: 'Skills',
   Icon: <KeyboardArrowDownIcon />,
-  order: 2,
+  id: 2,
 },
 {
-  href: '#Portfolio',
+  href: '/#Portfolio',
   label: 'Portfolio',
   Icon: <KeyboardArrowDownIcon />,
-  order: 3,
+  id: 3,
 },
 {
-  href: '#Contact',
+  href: '/#Contact',
   label: 'Kontakt',
   Icon: <KeyboardArrowDownIcon/>,
-  order: 4,
+  id: 4,
 },
 ];
 

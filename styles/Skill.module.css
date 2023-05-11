@@ -1,6 +1,4 @@
 .slide{
-    /* height: 14vh; */
-    /* width: 30vw; */
     object-fit: cover;
     display: flex;
     flex-direction: column;

@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 //mui
-import { AppBar, AppBarProps, Box, Container, ContainerProps, IconButton, styled, Toolbar, Typography } from '@mui/material'
+import { AppBar, AppBarProps, Box, Card, Container, ContainerProps, IconButton, styled, Toolbar, Typography } from '@mui/material'
 //next
 import Image, {ImageProps} from 'next/image'
 // images
 import logoDesk from '../../public/images/logo/MojeLogo.png'
 import logoMob from '../../public/images/logo/MojeLogoMob.png'
+
 //custom components
-import NavBar from './NavBar'
-import CustomDrawer from '../CustomComponents/CustomDrawer'
 import MenuIcon from '@mui/icons-material/Menu';
+import CustomAppBar from './CustomAppBar'
 
 interface HeaderProps{}
 
@@ -50,35 +50,26 @@ const LogoMob = styled(Image)<ImageProps>(({theme})=> ({
     display: "flex",
   }
 }))
+
+
 const Header: React.FC<HeaderProps> = (props) => {
   const [openDrawer, setOpenDrawer] = useState(false)
 
   return (
     <AppBarRoot position='static'>
       <ContainerRoot maxWidth='xl'>
-        <CustomDrawer open={openDrawer} onClose={() => setOpenDrawer(false)} />
         <Toolbar disableGutters>
-          <Typography component='a' href='/' sx={{position: "absolute"}}>
-            <LogoDesk src={logoDesk} alt='logo' width={150} height={90} priority  />
+          <Typography component='a' href='/'>
+            <LogoDesk src={logoDesk} alt='logo' width={150} height={90} /> 
           </Typography>
-          <Typography component='a' href='/' sx={{position: "absolute"}}>
-            <LogoMob src={logoMob} alt='logo' width={120} height={80}/>
-          </Typography> 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', sm: 'none' } }}>
-            <IconButton
-              size='large'
-              aria-label='menu'
-              sx={{justifyContent: "center", margin: "auto"}}
-              onClick={() => setOpenDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-            </Box>                  
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
-            <NavBar />
+          <Typography component='a' href='/'>
+            <LogoMob src={logoMob} alt='logo' width={120} height={80} />
+          </Typography>              
+          <Box >
+            <CustomAppBar />
           </Box>
         </Toolbar>
-      </ContainerRoot>
+       </ContainerRoot>
     </AppBarRoot>
   )
 }
