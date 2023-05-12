@@ -9,7 +9,7 @@ interface CertificateProps{}
 
 const LinkRoot = styled(Link)<LinkProps>(({theme})=> ({
     textDecoration: "none",
-    ...theme.typography.h5,
+    ...theme.typography.h3,
     color: theme.palette.primary.main,
     margin: "0.5rem 1rem",
     "&:hover": {
@@ -28,11 +28,11 @@ const Certificate: React.FC<CertificateProps> = (props) => {
             <Grid container spacing={2} columns={{ xs: 1}} margin="auto">
                 {certificates?.map ((Certificate, id) => (
                     <LinkRoot
-                        key={Certificate.id}
+                        key={id}
                         href={Certificate.href}
                         target='_black'
                         rel="nooper"
-                        sx={{margin:"auto"}}
+                        sx={{margin:"1rem auto"}}
                     >
                         {Certificate.label}
                         {Certificate.icon}
@@ -47,24 +47,4 @@ const Certificate: React.FC<CertificateProps> = (props) => {
 interface CertificateProps{}
 
 export default Certificate;
-
-
-{/* 
-    <Grid sx={{ flexGrow: 1,}} container spacing={{xs: 5}} justifyContent={"space-evenly"}>
-        <Grid xs={12} sm={6} md={4} lg={4}>
-                <ContactForm />
-        </Grid>
-        <Grid xs={12} sm={6} md={4}>
-                <BuyList />
-        </Grid>
-        <Grid xs={12} sm={6} md={4}>
-                <PortfolioMuiFirst />
-        </Grid>
-        <Grid xs={12} sm={6} md={4}>
-                <GeneratorCode />
-        </Grid>
-        <Grid xs={12} sm={6} md={4}>
-          <PortfolioMui />
-         </Grid>       */}
-    {/* </Grid> */}
   

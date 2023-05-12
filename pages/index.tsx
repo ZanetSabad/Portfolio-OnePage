@@ -7,9 +7,10 @@ import AboutMe from '@/components/sections/AboutMe';
 import Introduction from "@/components/sections/Introduction"
 import Skill from "@/components/sections/Skill"
 import Portfolio from '@/components/sections/Portfolio';
+import Certificate from '@/components/sections/Certificate';
 import ContactCard from '@/components/sections/ContactCard';
 import Footer from '@/components/sections/Footer';
-import Certificate from '@/components/sections/Certificate';
+
 
 const App = () => {
   return (

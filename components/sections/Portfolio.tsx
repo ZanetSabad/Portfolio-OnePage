@@ -33,23 +33,23 @@ const Portfolio: React.FC <PortfolioProps> = (props) => {
           }}
         > 
         <CustomTitle>Portfolio</CustomTitle>
-    <Grid sx={{ flexGrow: 1,}} container spacing={{xs: 5}} justifyContent={"space-evenly"}>
-        <Grid xs={12} sm={6} md={4} lg={4}>
-                <ContactForm />
+        <Grid sx={{ flexGrow: 1,}} container spacing={{xs: 5}} justifyContent={"space-evenly"}>
+            <Grid xs={12} sm={6} md={4} lg={4}>
+                    <ContactForm />
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+                    <BuyList />
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+                    <PortfolioMuiFirst />
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+                    <GeneratorCode />
+            </Grid>
+            <Grid xs={12} sm={6} md={4}>
+              <PortfolioMui />
+            </Grid>      
         </Grid>
-        <Grid xs={12} sm={6} md={4}>
-                <BuyList />
-        </Grid>
-        <Grid xs={12} sm={6} md={4}>
-                <PortfolioMuiFirst />
-        </Grid>
-        <Grid xs={12} sm={6} md={4}>
-                <GeneratorCode />
-        </Grid>
-        <Grid xs={12} sm={6} md={4}>
-          <PortfolioMui />
-         </Grid>      
-    </Grid>
     </Paper>
     </>
   );

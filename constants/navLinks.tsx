@@ -34,13 +34,13 @@ const navLinks: NavLink[] = [
   href: '/#Certificate',
   label: 'Certifikáty',
   Icon: <KeyboardArrowDownIcon />,
-  id: 3,
+  id: 4,
 },
 {
   href: '/#Contact',
   label: 'Kontakt',
   Icon: <KeyboardArrowDownIcon/>,
-  id: 4,
+  id: 5,
 },
 ];
 
