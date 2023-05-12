@@ -4,11 +4,13 @@ import iconLinks from "../constants/IconLinks"
 import navLinks from "../constants/navLinks"
 import contactLinks from "../constants/contactLinks"
 import skillsData from '../constants/skillsData';
+import certificates from "../constants/certificates";
 
 import { IconLink } from "../constants/IconLinks"
 import { NavLink } from "../constants/navLinks"
 import { ContactLink } from "../constants/contactLinks"
 import { SkillData } from "../constants/skillsData"
+import { Certificate } from "../constants/certificates";
 
 
 interface ContextProps {
@@ -16,6 +18,7 @@ interface ContextProps {
     navLinks? : NavLink[];
     contactLinks? : ContactLink[];
     skillsData?: SkillData[];
+    certificates?: Certificate[]
 }
 
 const context: ContextProps = {
@@ -23,6 +26,7 @@ const context: ContextProps = {
     navLinks,
     contactLinks,
     skillsData,
+    certificates,
 }
 
 const ConstantsContext = React.createContext(context)

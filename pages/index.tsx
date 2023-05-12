@@ -9,6 +9,7 @@ import Skill from "@/components/sections/Skill"
 import Portfolio from '@/components/sections/Portfolio';
 import ContactCard from '@/components/sections/ContactCard';
 import Footer from '@/components/sections/Footer';
+import Certificate from '@/components/sections/Certificate';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           <Introduction />
           <Skill />
           <Portfolio />
+          <Certificate />
           <ContactCard />
           <Footer />
       </main>

@@ -38,7 +38,17 @@ const ContactCard: React.FC<ContactCardProps> = (props, theme) => {
 
   return (
    
-    <Box sx={{padding: "2rem", backgroundColor: "transparent"}} id="Contact">
+     <Paper
+          id="Contact"  
+          elevation={5}
+          sx={{
+            p: 2,
+            margin: 'auto',
+            maxWidth: 1240,
+            flexGrow: 1,
+            backgroundColor: "transparent",
+          }}
+        > 
       <CustomTitle>Kontakt</CustomTitle>
       <Grid container xs={8} maxWidth="1240px" m="4rem auto" sx={{display: "flex", justifyContent: "space-evenly"}}>
       {contactLinks?.map((ContactLink, index) => (            
@@ -54,7 +64,7 @@ const ContactCard: React.FC<ContactCardProps> = (props, theme) => {
             </Item>  
         ))}          
       </Grid>
-    </Box>
+    </Paper>
   );
 }
 export default ContactCard;
