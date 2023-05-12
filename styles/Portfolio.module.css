@@ -20,7 +20,6 @@
     align-items: center;
     transition: all 0.5s;
     transform: translateX(-100%);
-    border: 2px solid red;
 }
 
 .container:hover .caption{

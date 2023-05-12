@@ -19,10 +19,10 @@ const PortfolioMui: React.FC<PortfolioMuiProps> = (props) => {
             <Card className={style.caption}>      
                 <Typography variant="h3" color="secondary.light">Portfolio</Typography>   
                 <Box>     
-                    <Image src="/images/logo/html.png" alt='HTML' width={80} height={80}></Image>        
-                    <Image src="/images/logo/css.png" alt="CSS" width={80} height={80}></Image>               
-                    <Image src="/images/logo/react.png" alt="React" width={80} height={80}></Image>               
-                    <Image src="/images/logo/material_ui.png" alt="Material UI" width={80} height={80}></Image>               
+                <Image src="/images/logo/html.png" alt='HTML' width={60} height={60}></Image>        
+                  <Image src="/images/logo/css.png" alt="CSS" width={60} height={60}></Image>               
+                  <Image src="/images/logo/react.png" alt="React" width={60} height={60}></Image>               
+                  <Image src="/images/logo/material_ui.png" alt="Material UI" width={60} height={60}></Image>             
                 </Box>
             </Card>
         </Card>

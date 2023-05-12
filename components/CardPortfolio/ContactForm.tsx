@@ -19,9 +19,9 @@ const ContactForm: React.FC<ContactFormProps> = (props) => {
             <Card className={style.caption}>      
                 <Typography variant="h3" color="secondary.light">Kontaktní formulář</Typography>   
                 <Box>     
-                    <Image src="/images/logo/html.png" alt='HTML' width={80} height={80}></Image>        
-                    <Image src="/images/logo/css.png" alt="CSS" width={80} height={80}></Image>               
-                    <Image src="/images/logo/php.png" alt="PHP" width={80} height={80}></Image>               
+                    <Image src="/images/logo/html.png" alt='HTML' width={60} height={60}></Image>        
+                    <Image src="/images/logo/css.png" alt="CSS" width={60} height={60}></Image>               
+                    <Image src="/images/logo/php.png" alt="PHP" width={60} height={60}></Image>               
                     
                 </Box>
                 <Link href="https://contact-form-fawn.vercel.app/"  target='_blank'  style={{color: "black"}}>Náhled</Link>

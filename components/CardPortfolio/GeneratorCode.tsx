@@ -19,11 +19,11 @@ const GeneratorCode: React.FC<GeneratorCodeProps> = (props) => {
             <Card className={style.caption}>      
                 <Typography variant="h3" color="secondary.light">Generator hesel</Typography>   
                 <Box >     
-                    <Image src="/images/logo/html.png" alt='HTML' width={80} height={80}></Image>        
-                    <Image src="/images/logo/css.png" alt="CSS" width={80} height={80}></Image>               
-                    <Image src="/images/logo/django.png" alt="Django" width={80} height={80}></Image>               
+                    <Image src="/images/logo/html.png" alt='HTML' width={60} height={60}></Image>        
+                    <Image src="/images/logo/css.png" alt="CSS" width={60} height={60}></Image>               
+                    <Image src="/images/logo/django.png" alt="Django" width={60} height={60}></Image>               
                 </Box>
-                <Link href=""  target='_blank'  style={{color: "black"}}>Náhled - zatím není k dispozici</Link>
+                <Link href="https://github.com/ZanetSabad/generator_hesel/tree/master"  target='_blank'  style={{color: "black"}}>Náhled, jen na GitHub</Link>
             </Card>
         </Card>
     </>
