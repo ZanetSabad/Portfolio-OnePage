@@ -1,39 +1,36 @@
 // react
-import * as React from 'react';
+import { FC } from 'react'
 // @mui
-import { IconButtonProps } from '@mui/material';
+import { IconButtonProps } from '@mui/material'
 // @mui/icons-material
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 // custom component
-import CustomIconButton from './CustomIconButton';
+import CustomIconButton from './CustomIconButton'
 // type
 interface MenuTogglerProps extends IconButtonProps {
-  open?: boolean;
+  open?: boolean
 }
 
-const MenuToggler: React.FC<MenuTogglerProps> = (props) => {
-  const {
-    color = 'primary',
-    open = false,
-    size = 'large',
-    ...otherProps
-  } = props;
+const MenuToggler: FC<MenuTogglerProps> = ({
+	open = 'false',
+	...otherProps
+}) => {
 
-  return (
-    <CustomIconButton
-      aria-label="Menu toggler"
-      size={size}
-      color={color}
-      {...otherProps}
-    >
-      {open ? (
-        <CloseIcon fontSize="inherit" color="inherit" />
-      ) : (
-        <MenuIcon fontSize="inherit" color="inherit" />
-      )}
-    </CustomIconButton>
-  );
-};
+	return (
+		<CustomIconButton
+			aria-label='Menu toggler'
+			size='medium'
+			color='inherit'
+			{...otherProps}
+		>
+			{open ? (
+				<CloseIcon fontSize='inherit' color='inherit' />
+			) : (
+				<MenuIcon fontSize='inherit' color='inherit' />
+			)}
+		</CustomIconButton>
+	)
+}
 
-export default MenuToggler;
+export default MenuToggler

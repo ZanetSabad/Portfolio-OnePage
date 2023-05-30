@@ -1,26 +1,25 @@
-import React from 'react';
+import { FC } from 'react'
 //mui
-import { styled, Typography, TypographyProps } from "@mui/material"
+import { styled, Typography, TypographyProps } from '@mui/material'
 
-interface CustomTitleProps extends TypographyProps{}
+type CustomTitleProps = {
+  children: React.ReactNode
+}
 
-const TypographyRoot = styled(Typography)<TypographyProps>(({theme})=>({
-    textAlign: "center",
-    margin: "3rem 0"
+const TypographyRoot = styled(Typography)<TypographyProps>(() => ({
+	textAlign: 'center',
+	margin: '3rem 0'
 }))
 
-const CustomTitle: React.FC<CustomTitleProps> = (props) => {
-    const {children, ...otherProps } = props
-  return (
-    <>
-      <TypographyRoot 
-        variant='h2'
-        color="text.secondary"
-      > 
-            {children} 
-      </TypographyRoot>
-    </>
-  );
+const CustomTitle: FC<CustomTitleProps> = ({ children }) => {
+	return (
+		<TypographyRoot 
+			variant='h2'
+			color='text.secondary'
+		> 
+			{children} 
+		</TypographyRoot>
+	)
 }
 
 export default CustomTitle

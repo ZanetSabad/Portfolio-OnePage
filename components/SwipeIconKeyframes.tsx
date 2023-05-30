@@ -1,20 +1,15 @@
-import React from 'react';
+import React, { FC } from 'react'
 //mui
-import SwipeIcon from '@mui/icons-material/Swipe';
-import { Box } from  "@mui/material"
+import SwipeIcon from '@mui/icons-material/Swipe'
+import { Box } from  '@mui/material'
 //css
-import style from  "../styles/Skill.module.css"
+import style from  '../styles/Skill.module.css'
 
-interface SwipeIconKeyframesProps{}
-
-const SwipeIconKeyframes: React.FC<SwipeIconKeyframesProps> = (props) => {
-  return (
-    <>
-      <div className={style.panToll}>
-        <SwipeIcon fontSize='large' color='info'/>
-      </div>
-    </>
-  );
+const SwipeIconKeyframes: FC = () => {
+	return(
+		<Box className={style.panToll}>
+			<SwipeIcon fontSize='large' color='info'/>
+		</Box>
+	)
 }
-
-export default SwipeIconKeyframes;
+export default SwipeIconKeyframes

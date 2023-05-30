@@ -1,39 +1,37 @@
-import React from 'react';
+import { FC, forwardRef } from 'react'
 //next
-import Link, { LinkProps } from 'next/link';
+import Link, { LinkProps } from 'next/link'
 //mui
-import { Button, ButtonProps, styled } from "@mui/material"
+import { ButtonProps, styled } from '@mui/material'
 //custom components
-import CustomButton from './CustomButton';
-import ScrollLink from '../ScrollLink';
+import CustomButton from './CustomButton'
+
 interface ButtonLinkProps extends ButtonProps {
-  href?: string;
+	href?: string
 }
 
 const LinkRoot= styled(Link)<LinkProps>(({ theme }) => 
-({  
-  textDecoration: "none",
-  '&:hover': {
-    color: theme.palette.primary.main,
-  },
- })) 
+	({  
+		textDecoration: 'none',
+		'&:hover': {
+			color: theme.palette.primary.main,
+		},
+	})) 
 
-const CustomButtonWithRef = React.forwardRef<ButtonLinkProps, ButtonLinkProps>(
-  ({ children, ...otherProps }, ref) => (
-    <CustomButton {...otherProps}>{children}</CustomButton>
-  )
-);
+const CustomButtonWithRef = forwardRef<ButtonLinkProps, ButtonLinkProps>(	
+	({ children, ...otherProps}, ref) => (
+		<CustomButton {...otherProps}>{children}</CustomButton>
+	)
+)
 
-CustomButtonWithRef.displayName = 'CustomButtonWithRef';
+CustomButtonWithRef.displayName = 'CustomButtonWithRef'
 
-const ButtonLink: React.FC<ButtonLinkProps> = (props) => {
-  const { children, href = '#', ref, ...otherProps } = props;
+const ButtonLink: FC<ButtonLinkProps> = ({ children, href = '#', ref }) => {
+	return (
+		<LinkRoot href={href} passHref >
+			<CustomButtonWithRef>{children}</CustomButtonWithRef>
+		</LinkRoot>
+	)
+}
 
-  return (
-    <LinkRoot href={href} passHref>
-      <CustomButtonWithRef {...otherProps}>{children}</CustomButtonWithRef>
-    </LinkRoot>
-  );
-};
-
-export default ButtonLink;
+export default ButtonLink

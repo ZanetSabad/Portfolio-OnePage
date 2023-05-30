@@ -15,7 +15,7 @@ const skillsData: SkillData[] = [
     images: <Image src='/images/logo/html.png' 
                   alt="HTML" 
                   width={150} 
-                  height={150}       
+          height={150}       
             />,
     imagesMob: <Image src='/images/logo/html.png' 
                     alt="HTML" 

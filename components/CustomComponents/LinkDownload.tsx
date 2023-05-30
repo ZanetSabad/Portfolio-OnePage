@@ -1,41 +1,40 @@
 // react
-import * as React from 'react';
+import { FC } from 'react'
 // mui
-import { Link, LinkProps, styled } from '@mui/material';
+import { Link, styled } from '@mui/material'
 
-interface LinkDownloadProps extends LinkProps {}
+type LinkDownloadProps = {children: React.ReactNode }
 
-const LinkDownloadRoot = styled(Link)<LinkDownloadProps>(({ theme, variant }) => ({
-      fontSize: "18px",
-      fontFamily: 'Inconsolata, monospace',
-      fontWeight: 600,
-      lineHeight: "22px",
-      textTransform: "capitalize",
-      display: "flex",
-      padding: 0,
-      marginRight: "44px",
-      marginBottom: "20px",
-      color: theme.palette.primary.light,
-      textDecoration: 'none',
-      cursor: 'pointer',
-      '&:hover': {
-        color: theme.palette.primary.main,
-      },    
-}));
+const LinkDownloadRoot = styled(Link)(({ theme }) => ({
+	fontSize: '18px',
+	fontFamily: 'Inconsolata, monospace',
+	fontWeight: 600,
+	lineHeight: '22px',
+	textTransform: 'capitalize',
+	display: 'flex',
+	padding: 0,
+	marginRight: '44px',
+	marginBottom: '20px',
+	color: theme.palette.primary.light,
+	textDecoration: 'none',
+	cursor: 'pointer',
+	'&:hover': {
+		color: theme.palette.primary.main,
+	},    
+}))
 
-const LinkDownload: React.FunctionComponent<LinkDownloadProps> = (props) => {
-  const { children, ...otherProps } = props;
+const LinkDownload: FC<LinkDownloadProps> = ({children, ...otherProps}) => {
 
-  return (
-    <LinkDownloadRoot  {...otherProps} 
-          href='/docs/Zaneta_Sabadkova_CV.pdf' 
-          download 
-          target='_blank' 
-          rel='noopener' 
-        >
-      {children}
-    </LinkDownloadRoot>
-  );
-};
+	return (
+		<LinkDownloadRoot  {...otherProps} 
+			href='/docs/Zaneta_Sabadkova_CV.pdf' 
+			download 
+			target='_blank' 
+			rel='noopener' 
+		>
+			{children}
+		</LinkDownloadRoot>
+	)
+}
 
-export default LinkDownload;
+export default LinkDownload

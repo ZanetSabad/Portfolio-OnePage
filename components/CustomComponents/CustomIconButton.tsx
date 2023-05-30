@@ -1,32 +1,31 @@
 // react
-import * as React from 'react';
+import { FC } from 'react'
 // @mui
-import { IconButton, IconButtonProps, styled } from '@mui/material';
-// type
-interface CustomIconButtonProps extends IconButtonProps {}
+import { IconButton, IconButtonProps, styled } from '@mui/material'
+
+type CustomIconButtonProps = { children: React.ReactNode, size: 'large' | 'small' | 'medium', 
+	color: 'inherit' | 'default' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning',
+	}
 
 const CustomIconButtonRoot = styled(IconButton)<IconButtonProps>(
-  ({ theme }) => ({
-    ': active': {
-      opacity: 0.5,
-      transition: '0.3s ease-in-out',
-    },
-    ':hover': {
-      backgroundColor: 'rgba(127, 127, 127, 0.1)',
-    },
-  })
-);
+	() => ({
+		': active': {
+			opacity: 0.5,
+			transition: '0.3s ease-in-out',
+		},
+		':hover': {
+			backgroundColor: 'rgba(127, 127, 127, 0.1)',
+		},
+	})
+)
 
-const CustomIconButton: React.FC<CustomIconButtonProps> = (
-  props
-) => {
-  const { children, color = 'inherit', disableRipple, ...otherProps } = props;
+const CustomIconButton: FC<CustomIconButtonProps> = ({ children, color = 'inherit', ...otherProps } ) => {
 
-  return (
-    <CustomIconButtonRoot color={color} disableRipple {...otherProps}>
-      {children}
-    </CustomIconButtonRoot>
-  );
-};
+	return (
+		<CustomIconButtonRoot color={color} disableRipple {...otherProps}>
+			{children}
+		</CustomIconButtonRoot>
+	)
+}
 
-export default CustomIconButton;
+export default CustomIconButton

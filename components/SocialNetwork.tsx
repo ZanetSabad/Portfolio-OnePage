@@ -1,38 +1,32 @@
-import React from 'react';
+import { FC, useContext } from 'react'
 //mui
-import { IconButton, MenuItem, MenuItemProps, styled } from "@mui/material"
+import { IconButton, MenuItem, MenuItemProps, styled } from '@mui/material'
 //custom components
-import ConstantsContext from '../context/constantsContext';
+import ConstantsContext from '../context/constantsContext'
 
+export const IconBox = styled(MenuItem)<MenuItemProps>(() => ({
+	justifyContent: 'flex-end', 
+	'&:hover': {
+		background: 'none'}
+}))
 
-interface SocialNetworkProps{}
+const SocialNetwork:FC = () => {
+	const { iconLinks } = useContext(ConstantsContext)
+	iconLinks?.sort((a, b) => (a.order > b.order ? 1 : -1))
 
-const IconBox = styled(MenuItem)<MenuItemProps>(({theme}) => ({
-    justifyContent: "flex-end", 
-    "&:hover": {
-      background: "none"}
-  }))
-
-const SocialNetwork: React.FC<SocialNetworkProps> = () => {
-
-    const { iconLinks } = React.useContext(ConstantsContext);
-    iconLinks?.sort((a, b) => (a.order > b.order ? 1 : -1));
-
-    return (
-    <>
-                <IconBox>             
-          {iconLinks?.map((IconLink, index) => (
-                 <IconButton
-                    key={IconLink.href}
-                    href={IconLink.href}
-                    target='_blank'
-                  >
-                    {IconLink.Icon}
-                    </IconButton>
-            ))}
-        </IconBox>
-    </>
-  );
+	return (
+		<IconBox>             
+			{iconLinks?.map((IconLink) => (
+				<IconButton
+					key={IconLink.href}
+					href={IconLink.href}
+					target='_blank'
+				>
+					{IconLink.Icon}
+				</IconButton>
+			))}
+		</IconBox>
+	)
 }
 
-export default SocialNetwork;
+export default SocialNetwork
