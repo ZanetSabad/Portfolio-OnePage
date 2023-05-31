@@ -145,12 +145,12 @@ const skillsData: SkillData[] = [
     },
   {
     id: 11,
-    images: <Image src='/images/logo/ShotCut.png' 
+    images: <Image src='/images/logo/shotcut.png' 
                   alt="ShotCut" 
                   width={150} 
                   height={150}
             />,
-    imagesMob: <Image src='/images/logo/ShotCut.png' 
+    imagesMob: <Image src='/images/logo/shotcut.png' 
                       alt="ShotCut" 
                       width={120} 
                       height={120}

@@ -25,7 +25,7 @@ const Skill: FC = () => {
 
 	return (        
 		<BoxRoot id='Skills' >
-			<CustomTitle>Moje &quotskilly&quot</CustomTitle>
+			<CustomTitle>Moje &quot;skilly&quot;</CustomTitle>
 			<Box sx={{display: {xs: 'none', sm: 'block'}}}>
 				<Box className={style.boxSkill}>
 					<Swiper
