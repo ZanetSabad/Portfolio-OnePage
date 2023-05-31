@@ -11,7 +11,7 @@ export interface SkillData {
 
 const skillsData: SkillData[] = [
   { 
-    id: 0,
+    id: 1,
     images: <Image src='/images/logo/html.png' 
                   alt="HTML" 
                   width={150} 
@@ -24,7 +24,7 @@ const skillsData: SkillData[] = [
       />,    
   },   
   {
-    id: 1,
+    id: 2,
     images: <Image src='/images/logo/css.png' 
                     alt="CSS" 
                     width={150} 
@@ -37,7 +37,7 @@ const skillsData: SkillData[] = [
 />,         
   },
   {
-    id: 2,
+    id: 3,
     images: <Image src='/images/logo/js.png' 
                 alt="JavaScript" 
                 width={150} 
@@ -50,7 +50,7 @@ const skillsData: SkillData[] = [
 />,       
   },
  {
-    id: 3,
+    id: 4,
     images:<Image src='/images/logo/sass.png' 
                   alt="SaSS" 
                   width={150} 
@@ -63,7 +63,7 @@ const skillsData: SkillData[] = [
               />              
     },
   {
-    id: 4,
+    id: 5,
     images:<Image src='/images/logo/git.png' 
                   alt="Git" 
                   width={150} 
@@ -78,7 +78,7 @@ const skillsData: SkillData[] = [
                     
     },
   {
-    id: 5,
+    id: 6,
     images: <Image src='/images/logo/github.png' 
                     alt="GitHub" 
                     width={150} 
@@ -91,7 +91,7 @@ const skillsData: SkillData[] = [
                 />       
     },
   {
-    id: 6,
+    id: 7,
     images: <Image src='/images/logo/canva.png' 
                     alt="Canva" 
                     width={150} 
@@ -104,7 +104,7 @@ const skillsData: SkillData[] = [
                />
       },
   {
-    id: 7,
+    id: 8,
     images:<Image src='/images/logo/python.png' 
                   alt="Python" 
                   width={150} 
@@ -117,7 +117,7 @@ const skillsData: SkillData[] = [
               />       
       },
   {
-    id: 8,
+    id: 9,
     images: <Image src='/images/logo/ga.png' 
               alt="Google Analytics" 
               width={150} 
@@ -130,7 +130,7 @@ const skillsData: SkillData[] = [
                 />                
     },
   {
-    id: 9,
+    id: 10,
     images:<Image src='/images/logo/seo.png' 
                   alt="SEO" 
                   width={150} 
@@ -144,7 +144,7 @@ const skillsData: SkillData[] = [
               
     },
   {
-    id: 10,
+    id: 11,
     images: <Image src='/images/logo/ShotCut.png' 
                   alt="ShotCut" 
                   width={150} 
@@ -157,7 +157,7 @@ const skillsData: SkillData[] = [
                 />             
   },
   {
-    id: 11,
+    id: 12,
     images: <Image src='/images/logo/figma.png' 
                     alt="Figma" 
                     width={150} 
@@ -170,7 +170,7 @@ const skillsData: SkillData[] = [
                 />    
   },
   {
-  id: 12,
+  id: 13,
   images: <Image src='/images/logo/react.png' 
                   alt="React" 
                   width={150} 
@@ -183,7 +183,7 @@ const skillsData: SkillData[] = [
               />    
   },
   { 
-  id: 13,
+  id: 14,
   images: <Image src='/images/logo/material_ui.png' 
                   alt="Material UI" 
                   width={150} 
@@ -196,7 +196,7 @@ const skillsData: SkillData[] = [
               />    
   },
   { 
-  id: 14,
+  id: 15,
   images: <Image src='/images/logo/php.png' 
                   alt="Php" 
                   width={150} 
@@ -209,7 +209,7 @@ const skillsData: SkillData[] = [
               />    
   },
   { 
-  id: 15,
+  id: 16,
   images: <Image src='/images/logo/django.png' 
                   alt="Django" 
                   width={150} 
