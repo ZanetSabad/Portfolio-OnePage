@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Obr from '../../public/images/obr.png';
 // @mui
 import { Grid, GridProps, Paper, Typography, styled } from '@mui/material';
-import style from '../../styles/Introduction.module.css'
+import style from '../../styles/Introduction.module.css';
 
 const GridImg = styled(Grid)<GridProps>(({theme})=> ({
 	[theme.breakpoints.down('sm')]:{
