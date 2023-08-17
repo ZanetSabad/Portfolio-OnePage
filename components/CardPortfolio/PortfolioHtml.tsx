@@ -12,7 +12,7 @@ const PortfolioMui: FC = () => {
 			<CardMedia className={style.img}
 				component='img'
 				height='200'
-				image='/images/portfolio/portfolioHTML.png'
+				image='/images/portfolio/PortfolioHTML.png'
 				alt='Portfolio'
 			/>        
 			<Card className={style.caption}>      
