@@ -1,7 +1,7 @@
 // react
-import { FC } from 'react'
+import { FC } from 'react';
 // mui
-import { Link, styled } from '@mui/material'
+import { Link, styled } from '@mui/material';
 
 type LinkDownloadProps = {children: React.ReactNode }
 
@@ -21,10 +21,9 @@ const LinkDownloadRoot = styled(Link)(({ theme }) => ({
 	'&:hover': {
 		color: theme.palette.primary.main,
 	},    
-}))
+}));
 
 const LinkDownload: FC<LinkDownloadProps> = ({children, ...otherProps}) => {
-
 	return (
 		<LinkDownloadRoot  {...otherProps} 
 			href='/docs/Zaneta_Sabadkova_CV.pdf' 
@@ -34,7 +33,7 @@ const LinkDownload: FC<LinkDownloadProps> = ({children, ...otherProps}) => {
 		>
 			{children}
 		</LinkDownloadRoot>
-	)
-}
+	);
+};
 
-export default LinkDownload
+export default LinkDownload;

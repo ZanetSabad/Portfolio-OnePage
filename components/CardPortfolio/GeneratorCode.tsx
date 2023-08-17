@@ -1,8 +1,11 @@
-import { FC } from 'react'
-import { Box, Card, CardMedia, Typography } from '@mui/material'
-import Image from 'next/image'
-import Link from 'next/link'
-import style from '../../styles/Portfolio.module.css'
+import { FC } from 'react';
+//mui
+import { Box, Card, CardMedia, Typography } from '@mui/material';
+//next
+import Image from 'next/image';
+import Link from 'next/link';
+//css
+import style from '../../styles/Portfolio.module.css';
 
 const GeneratorCode: FC = () => {
 	return (
@@ -23,7 +26,6 @@ const GeneratorCode: FC = () => {
 				<Link href='https://github.com/ZanetSabad/generator_hesel/tree/master'  target='_blank'  style={{color: 'black'}}>Náhled, jen na GitHub</Link>
 			</Card>
 		</Card>
-	)
-}
-
-export default GeneratorCode
+	);
+};
+export default GeneratorCode;

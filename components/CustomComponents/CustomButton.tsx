@@ -1,11 +1,11 @@
 // react
-import { FC } from 'react'
+import { FC } from 'react';
 // @mui
-import { Button, ButtonProps, styled } from '@mui/material'
+import { Button, ButtonProps, styled } from '@mui/material';
 
 type CustomButtonProps = {
   children: React.ReactNode
-}
+};
 
 const CustomButtonRoot = styled(Button)<ButtonProps>(({ theme }) => ({
 	fontFamily: 'Inconsolata, monospace',
@@ -34,14 +34,14 @@ const CustomButtonRoot = styled(Button)<ButtonProps>(({ theme }) => ({
 		backgroundColor: 'transparent',
 		color: 'currentcolor',
 	},
-}))
+}));
 
 const CustomButton: FC<CustomButtonProps> = ({ children, ...otherProps }) => {
 	return (
 		<CustomButtonRoot disableRipple {...otherProps}>
 			{children}
 		</CustomButtonRoot>
-	)
-}
+	);
+};
 
-export default CustomButton
+export default CustomButton;

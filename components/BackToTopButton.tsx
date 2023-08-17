@@ -1,27 +1,27 @@
-import { FC, useEffect, useState} from 'react'
+import { FC, useEffect, useState} from 'react';
 //mui
-import { Button } from '@mui/material'
-import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp'
+import { Button } from '@mui/material';
+import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 const BackToTopButton: FC = () => {
-	const [backToTopButton, setBackToTopButton] = useState(false)
+	const [backToTopButton, setBackToTopButton] = useState(false);
 
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
 			if(window.scrollY > 500) {
-				setBackToTopButton(true)
+				setBackToTopButton(true);
 			} else {
-				setBackToTopButton(false)
+				setBackToTopButton(false);
 			}
-		})
-	}, [])
+		});
+	}, []);
 
 	const scrollUp = () => {
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth'
-		})
-	}
+		});
+	};
 
 	return (
 		<>
@@ -40,7 +40,7 @@ const BackToTopButton: FC = () => {
 				</Button>
 			)}
 		</>
-	)
-}
+	);
+};
 
-export default BackToTopButton
+export default BackToTopButton;

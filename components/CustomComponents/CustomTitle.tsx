@@ -1,15 +1,15 @@
-import { FC } from 'react'
+import { FC } from 'react';
 //mui
-import { styled, Typography, TypographyProps } from '@mui/material'
+import { styled, Typography, TypographyProps } from '@mui/material';
 
 type CustomTitleProps = {
   children: React.ReactNode
-}
+};
 
 const TypographyRoot = styled(Typography)<TypographyProps>(() => ({
 	textAlign: 'center',
 	margin: '3rem 0'
-}))
+}));
 
 const CustomTitle: FC<CustomTitleProps> = ({ children }) => {
 	return (
@@ -19,7 +19,7 @@ const CustomTitle: FC<CustomTitleProps> = ({ children }) => {
 		> 
 			{children} 
 		</TypographyRoot>
-	)
-}
+	);
+};
 
-export default CustomTitle
+export default CustomTitle;

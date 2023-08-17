@@ -1,14 +1,14 @@
-import { FC } from 'react'
+import { FC } from 'react';
 //mui
-import { Paper } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
+import { Paper } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 //custom components
-import CustomTitle from '../CustomComponents/CustomTitle'
-import ContactForm from '../CardPortfolio/ContactForm'
-import GeneratorCode from '../CardPortfolio/GeneratorCode'
-import PortfolioMuiFirst from '../CardPortfolio/PortfolioMuiFirst'
-import BuyList from '../CardPortfolio/BuyList'
-import PortfolioMui from '../CardPortfolio/PortfolioMui'
+import CustomTitle from '../CustomComponents/CustomTitle';
+import ContactForm from '../CardPortfolio/ContactForm';
+import GeneratorCode from '../CardPortfolio/GeneratorCode';
+import PortfolioMuiFirst from '../CardPortfolio/PortfolioMuiFirst';
+import BuyList from '../CardPortfolio/BuyList';
+import PortfolioHtml from '../CardPortfolio/PortfolioHtml';
 
 const Portfolio:FC = () => {
 
@@ -39,12 +39,13 @@ const Portfolio:FC = () => {
 					<GeneratorCode />
 				</Grid>
 				<Grid xs={12} sm={6} md={4}>
-					<PortfolioMui />
+					<PortfolioHtml />
 				</Grid>      	
 			</Grid>
 		</Paper>
-	)
-}
-export default Portfolio
+	);
+};
+
+export default Portfolio;
 
 

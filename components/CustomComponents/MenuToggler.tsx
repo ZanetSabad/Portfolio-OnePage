@@ -1,16 +1,16 @@
 // react
-import { FC } from 'react'
+import { FC } from 'react';
 // @mui
-import { IconButtonProps } from '@mui/material'
+import { IconButtonProps } from '@mui/material';
 // @mui/icons-material
-import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close'
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 // custom component
-import CustomIconButton from './CustomIconButton'
+import CustomIconButton from './CustomIconButton';
 // type
-interface MenuTogglerProps extends IconButtonProps {
+type MenuTogglerProps = IconButtonProps & {
   open?: boolean
-}
+};
 
 const MenuToggler: FC<MenuTogglerProps> = ({
 	open = 'false',
@@ -30,7 +30,7 @@ const MenuToggler: FC<MenuTogglerProps> = ({
 				<MenuIcon fontSize='inherit' color='inherit' />
 			)}
 		</CustomIconButton>
-	)
-}
+	);
+};
 
-export default MenuToggler
+export default MenuToggler;

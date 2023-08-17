@@ -4,10 +4,11 @@
         "es2021": true
     },
     "extends": [
-        "next",
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/jsx-runtime",
+        "next", "prettier"
     ],
     "overrides": [
     ],
@@ -21,10 +22,6 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "react/no-unescaped-entities": "off",
-        "@next/next/no-page-custom-font": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-uses-react": "off",
         "indent": [
             "error",
             "tab"
@@ -38,7 +35,8 @@
         ],
         "semi": [
             "error",
-            "never"
+            "always"
         ]
     }
 }
+    

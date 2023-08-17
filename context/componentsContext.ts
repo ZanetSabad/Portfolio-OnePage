@@ -3,7 +3,7 @@ import * as React from 'react';
 // type
 import { Breakpoint } from '@mui/material';
 
-interface ContextProps {
+type ContextProps = {
   containerMaxWidth?: Breakpoint | false;
 }
 

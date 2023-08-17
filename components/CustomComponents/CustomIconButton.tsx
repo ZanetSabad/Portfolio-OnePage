@@ -1,11 +1,11 @@
 // react
-import { FC } from 'react'
+import { FC } from 'react';
 // @mui
-import { IconButton, IconButtonProps, styled } from '@mui/material'
+import { IconButton, IconButtonProps, styled } from '@mui/material';
 
 type CustomIconButtonProps = { children: React.ReactNode, size: 'large' | 'small' | 'medium', 
 	color: 'inherit' | 'default' | 'primary' | 'secondary' | 'error' | 'info' | 'success' | 'warning',
-	}
+	};
 
 const CustomIconButtonRoot = styled(IconButton)<IconButtonProps>(
 	() => ({
@@ -17,7 +17,7 @@ const CustomIconButtonRoot = styled(IconButton)<IconButtonProps>(
 			backgroundColor: 'rgba(127, 127, 127, 0.1)',
 		},
 	})
-)
+);
 
 const CustomIconButton: FC<CustomIconButtonProps> = ({ children, color = 'inherit', ...otherProps } ) => {
 
@@ -25,7 +25,7 @@ const CustomIconButton: FC<CustomIconButtonProps> = ({ children, color = 'inheri
 		<CustomIconButtonRoot color={color} disableRipple {...otherProps}>
 			{children}
 		</CustomIconButtonRoot>
-	)
-}
+	);
+};
 
-export default CustomIconButton
+export default CustomIconButton;

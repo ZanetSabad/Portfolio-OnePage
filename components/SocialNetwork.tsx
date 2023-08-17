@@ -1,22 +1,19 @@
-import { FC, useContext } from 'react'
+import { FC } from 'react';
 //mui
-import { IconButton, MenuItem, MenuItemProps, styled } from '@mui/material'
+import { IconButton, MenuItem, MenuItemProps, styled } from '@mui/material';
 //custom components
-import ConstantsContext from '../context/constantsContext'
+import NetworkIcon from '../constants/IconLinks';
 
 export const IconBox = styled(MenuItem)<MenuItemProps>(() => ({
 	justifyContent: 'flex-end', 
 	'&:hover': {
 		background: 'none'}
-}))
+}));
 
 const SocialNetwork:FC = () => {
-	const { iconLinks } = useContext(ConstantsContext)
-	iconLinks?.sort((a, b) => (a.order > b.order ? 1 : -1))
-
 	return (
 		<IconBox>             
-			{iconLinks?.map((IconLink) => (
+			{NetworkIcon?.map((IconLink) => (
 				<IconButton
 					key={IconLink.href}
 					href={IconLink.href}
@@ -26,7 +23,7 @@ const SocialNetwork:FC = () => {
 				</IconButton>
 			))}
 		</IconBox>
-	)
-}
+	);
+};
 
-export default SocialNetwork
+export default SocialNetwork;

@@ -1,19 +1,15 @@
-import { FC, useContext } from 'react'
+import { FC } from 'react';
 //mui
-import { Card, Grid } from '@mui/material'
+import { Card, Grid } from '@mui/material';
 //custom components
-import ConstantsContext from '../../context/constantsContext'
+import SkillData from '../../constants/skillsData';
 //css
-import style from '../../styles/Skill.module.css'
+import style from '../../styles/Skill.module.css';
 
 const SkillsMob:FC = () => {
-
-	const { skillsData } = useContext(ConstantsContext)
-	skillsData?.sort((a, b) => (a.id > b.id ? 1 : -1))
-
 	return (
 		<Grid sx={{alignItems:'center', justifyContent:'center'}} container>
-			{skillsData?.map((SkillData) => (
+			{SkillData?.map((SkillData) => (
 				<Card key={SkillData.id}
 					sx={{ width: '140px', 
 						backgroundColor: 'transparent',
@@ -23,6 +19,6 @@ const SkillsMob:FC = () => {
 				</Card>
 			))}
 		</Grid>
-	)
-}
-export default SkillsMob
+	);
+};
+export default SkillsMob;

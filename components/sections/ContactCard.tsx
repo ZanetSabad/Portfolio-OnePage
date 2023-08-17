@@ -1,11 +1,12 @@
 // react
-import { FC, useContext } from 'react'
+import { FC } from 'react';
 // mui
-import { Box, BoxProps, CardActionArea, Paper, styled } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
+import { Box, BoxProps, CardActionArea, Paper, styled } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 // custom component
-import CustomTitle from '../CustomComponents/CustomTitle'
-import ConstantsContext from '../../context/constantsContext'
+import CustomTitle from '../CustomComponents/CustomTitle';
+//data
+import Contact from '../../constants/contactLinks';
 
 export const Item = styled(Paper)(({ theme }) => ({
 	width: '300px',
@@ -19,18 +20,15 @@ export const Item = styled(Paper)(({ theme }) => ({
 	[theme.breakpoints.down('sm')]: {
 		width: '100px'
 	},
-}))
+}));
 
 export const BoxLabel = styled(Box)<BoxProps>(({theme})=> ({
 	[theme.breakpoints.down('sm')]: {	
 		display: 'none'
 	}
-}))
+}));
 
 const ContactCard: FC = () => {
-	const { contactLinks } = useContext(ConstantsContext)
-	contactLinks?.sort((a, b) => (a.id > b.id ? 1 : -1))
-
 	return (
 		<Paper
 			id='Contact'  
@@ -45,7 +43,7 @@ const ContactCard: FC = () => {
 		> 
 			<CustomTitle>Kontakt</CustomTitle>
 			<Grid container xs={8} maxWidth='1240px' m='4rem auto' sx={{display: 'flex', justifyContent: 'space-evenly'}}>
-				{contactLinks?.map((ContactLink, index) => (            
+				{Contact?.map((ContactLink, index) => (            
 					<Item key={ContactLink.id + index}>
 						<CardActionArea                               
 							href={ContactLink.href}                  
@@ -59,6 +57,6 @@ const ContactCard: FC = () => {
 				))}          
 			</Grid>
 		</Paper>
-	)
-}
-export default ContactCard
+	);
+};
+export default ContactCard;

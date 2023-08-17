@@ -1,28 +1,25 @@
-import { FC, useContext } from 'react'
+import { FC } from 'react';
 //swiper
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwipeIconKeyframes from '../SwipeIconKeyframes'
-import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwipeIconKeyframes from '../SwipeIconKeyframes';
+import 'swiper/css';
 //mui
-import { Box, BoxProps, styled } from '@mui/material'
+import { Box, BoxProps, styled } from '@mui/material';
 //custom components
-import CustomTitle from '../CustomComponents/CustomTitle'
-import ConstantsContext from '@/context/constantsContext'
-import SkillsMob from './SkillsMob'
+import CustomTitle from '../CustomComponents/CustomTitle';
+import SkillsMob from './SkillsMob';
 //css
-import style from '../../styles/Skill.module.css'
+import style from '../../styles/Skill.module.css';
+// data
+import SkillData from '../../constants/skillsData';
 
 export const BoxRoot = styled(Box)<BoxProps>(()=> ({
 	maxWidth: '1240px',
 	margin: 'auto',
 	padding: '2rem',
-}))
+}));
 
 const Skill: FC = () => {
-
-	const { skillsData } = useContext(ConstantsContext)
-	skillsData?.sort((a, b) => (a.id > b.id ? 1 : -1))
-
 	return (        
 		<BoxRoot id='Skills' >
 			<CustomTitle>Moje &quot;skilly&quot;</CustomTitle>
@@ -34,7 +31,7 @@ const Skill: FC = () => {
 						spaceBetween={10}
 						slidesPerView={5}       
 					>        
-						{skillsData?.map((SkillData, id) => (
+						{SkillData?.map((SkillData, id) => (
 							<SwiperSlide key={id} className={style.slide}>
 								{SkillData.images}
 							</SwiperSlide>
@@ -49,7 +46,7 @@ const Skill: FC = () => {
 				<SkillsMob /> 
 			</Box>
 		</BoxRoot>          
-	)
-}
+	);
+};
 
-export default Skill
+export default Skill;

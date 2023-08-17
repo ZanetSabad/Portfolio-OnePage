@@ -1,13 +1,13 @@
-import { FC } from 'react'
+import { FC } from 'react';
 //mui
-import { AppBar, AppBarProps, Box, Container, ContainerProps, styled, Toolbar, Typography } from '@mui/material'
+import { AppBar, AppBarProps, Box, Container, ContainerProps, styled, Toolbar, Typography } from '@mui/material';
 //next
-import Image, {ImageProps} from 'next/image'
+import Image, {ImageProps} from 'next/image';
 // images
-import logoDesk from '../../public/images/logo/MojeLogo.png'
-import logoMob from '../../public/images/logo/MojeLogoMob.png'
+import logoDesk from '../../public/images/logo/MojeLogo.png';
+import logoMob from '../../public/images/logo/MojeLogoMob.png';
 //custom components
-import CustomAppBar from './CustomAppBar'
+import CustomAppBar from './CustomAppBar';
 
 export const AppBarRoot = styled(AppBar)<AppBarProps>(()=> ({
 	backgroundColor: 'transparent',
@@ -16,14 +16,14 @@ export const AppBarRoot = styled(AppBar)<AppBarProps>(()=> ({
 	padding: '20px 0',
 	margin: 'auto',
 	maxWidth: '1240px',
-}))
+}));
 
 export const ContainerRoot = styled(Container)<ContainerProps>(({theme})=> ({
 	[theme.breakpoints.up('lg')]:{
 		padding: 0,
 		margin: 0,
 	}
-}))
+}));
 
 const LogoDesk = styled(Image)<ImageProps>(({theme})=> ({
 	marginLeft: '5rem',
@@ -34,7 +34,7 @@ const LogoDesk = styled(Image)<ImageProps>(({theme})=> ({
 	[theme.breakpoints.down('md')]:{
 		display: 'none',
 	}
-}))
+}));
 
 const LogoMob = styled(Image)<ImageProps>(({theme})=> ({
 	mr: 2,
@@ -45,7 +45,7 @@ const LogoMob = styled(Image)<ImageProps>(({theme})=> ({
 	[theme.breakpoints.down('md')]:{
 		display: 'flex',
 	}
-}))
+}));
 
 const Header: FC = () => {
 	return (
@@ -53,7 +53,7 @@ const Header: FC = () => {
 			<ContainerRoot maxWidth='xl'>
 				<Toolbar disableGutters>
 					<Typography component='a' href='/'>
-						<LogoDesk src={logoDesk} alt='logo' width={150} height={90} /> 
+						<LogoDesk src={logoDesk} alt='logo' width={150} height={90} priority/> 
 					</Typography>
 					<Typography component='a' href='/'>
 						<LogoMob src={logoMob} alt='logo' width={120} height={80} />
@@ -64,7 +64,8 @@ const Header: FC = () => {
 				</Toolbar>
 			</ContainerRoot>
 		</AppBarRoot>
-	)
-}
-export default Header
+	);
+};
+
+export default Header;
 

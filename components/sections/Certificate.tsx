@@ -1,9 +1,13 @@
-import { FC, useContext } from 'react'
-import { Box, styled } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
-import CustomTitle from '../CustomComponents/CustomTitle'
-import ConstantsContext from '../../context/constantsContext'
-import Link, { LinkProps } from 'next/link'
+import { FC } from 'react';
+//mui
+import { Box, styled } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
+//custom components
+import CustomTitle from '../CustomComponents/CustomTitle';
+//next
+import Link, { LinkProps } from 'next/link';
+//data 
+import CertificateList from '../../constants/certificates';
 
 export const LinkRoot = styled(Link)<LinkProps>(({theme})=> ({
 	textDecoration: 'none',
@@ -13,17 +17,14 @@ export const LinkRoot = styled(Link)<LinkProps>(({theme})=> ({
 	'&:hover': {
 		color: theme.palette.primary.light
 	}
-}))
+}));
 
-const Certificate: FC = () => {
-	const { certificates } = useContext(ConstantsContext)
-	certificates?.sort((a, b) => (a.id > b.id ? 1 : -1))
-	
+const Certificate: FC = () => {	
 	return (
 		<Box sx={{padding: '4rem', backgroundColor: 'transparent'}} id='Certificate'>
 			<CustomTitle>Certifikáty</CustomTitle>
 			<Grid container spacing={2} columns={{ xs: 1}} margin='auto'>
-				{certificates?.map ((Certificate, id) => (
+				{CertificateList?.map ((Certificate, id) => (
 					<LinkRoot
 						key={id}
 						href={Certificate.href}
@@ -37,7 +38,8 @@ const Certificate: FC = () => {
 				))}
 			</Grid>
 		</Box>
-	)
-}
-export default Certificate
+	);
+};
+
+export default Certificate;
   

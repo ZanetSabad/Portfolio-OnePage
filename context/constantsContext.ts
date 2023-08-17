@@ -13,7 +13,7 @@ import { SkillData } from "../constants/skillsData"
 import { Certificate } from "../constants/certificates";
 
 
-interface ContextProps {
+type ContextProps = {
     iconLinks? :IconLink[];
     navLinks? : NavLink[];
     contactLinks? : ContactLink[];
@@ -21,7 +21,7 @@ interface ContextProps {
     certificates?: Certificate[]
 }
 
-const context: ContextProps = {
+export const context: ContextProps = {
     iconLinks,
     navLinks,
     contactLinks,

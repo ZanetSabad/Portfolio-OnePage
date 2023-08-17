@@ -1,8 +1,11 @@
-import { FC } from 'react'
-import { Box, Card, CardMedia, Typography } from '@mui/material'
-import Image from 'next/image'
-import Link from 'next/link'
-import style from '../../styles/Portfolio.module.css'
+import { FC } from 'react';
+//mui
+import { Box, Card, CardMedia, Typography } from '@mui/material';
+//next
+import Image from 'next/image';
+import Link from 'next/link';
+//css
+import style from '../../styles/Portfolio.module.css';
 
 const BuyList: FC = () => {
 	return(
@@ -23,7 +26,7 @@ const BuyList: FC = () => {
 				<Link href='https://aplikace-ukoly-2wdh.vercel.app/'  target='_blank' style={{color: 'black'}}>Náhled</Link>
 			</Card>
 		</Card>
-	)
-}
+	);
+};
 
-export default BuyList
+export default BuyList;

@@ -1,53 +1,49 @@
 // react
-import { FC, useState, useContext, useRef } from 'react'
+import { FC, useState, useRef } from 'react';
 // next
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 // mui
-import { AppBar, AppBarProps, Box, BoxProps, Container, Grow, ListItemButton, ListItemIcon, ListItemText, Toolbar, 
-	ToolbarProps, styled } from '@mui/material'
-import DownloadForIcon from '@mui/icons-material/DownloadForOffline'
+import { AppBar, AppBarProps, Box, BoxProps, Container, Grow, ListItemButton, ListItemIcon, ListItemText, Toolbar, ToolbarProps, styled } from '@mui/material';
+import DownloadForIcon from '@mui/icons-material/DownloadForOffline';
 // custom component
-import ButtonLink from '../CustomComponents/ButtonLink'
-import MenuToggler from '../CustomComponents/MenuToggler'
-import LinkDownload from '../CustomComponents/LinkDownload'
-import ConstantsContext from '../../context/constantsContext'
-import ComponentsContext from '../../context/componentsContext'
+import ButtonLink from '../CustomComponents/ButtonLink';
+import MenuToggler from '../CustomComponents/MenuToggler';
+import LinkDownload from '../CustomComponents/LinkDownload';
+//data
+import navigate from '../../constants/navLinks';
 
 const CustomAppBarRoot = styled(AppBar)<AppBarProps>(() => ({
 	backgroundColor: 'transparent',
 	boxShadow: 'none',
-}))
+}));
 
 const LinkContainer = styled(Box)<BoxProps>(({ theme }) => ({
 	marginLeft: theme.direction === 'ltr' ? 'auto' : 'none',
 	marginRight: theme.direction === 'rtl' ? 'auto' : 'none',
-}))
+}));
 
 const LinksBox = styled(Box)<BoxProps>(({ theme }) => ({
 	[theme.breakpoints.down('sm')]: {
 		display: 'none',
 	},
-}))
+}));
 
 const CustomToolbar = styled(Toolbar)<ToolbarProps>(({ theme }) => ({
 	[theme.breakpoints.down('md')]: {
 		padding: 0,
 	},
-}))
+}));
 
 const CustomAppBar: FC = () => {
-	const [dropdownState, setDropdownState] = useState(false)
-	const { containerMaxWidth = 'lg' } = useContext(ComponentsContext)
-	const { navLinks } = useContext(ConstantsContext)
-	navLinks?.sort((a, b) => (a.id > b.id ? 1 : -1))
+	const [dropdownState, setDropdownState] = useState(false);
 
-	const appBarRef = useRef(null)
+	const appBarRef = useRef(null);
 
-	const router = useRouter()
+	const router = useRouter();
 	const handleDropdownItemClick = (href: string) => {
-		setDropdownState(false)
-		router.push(href)
-	}
+		setDropdownState(false);
+		router.push(href);
+	};
 
 	return (
 		<CustomAppBarRoot position='absolute' ref={appBarRef}>
@@ -55,7 +51,7 @@ const CustomAppBar: FC = () => {
 				<CustomToolbar sx={{ marginLeft: 'auto'}}>
 					<LinkContainer>
 						<LinksBox sx={{flexGrow: 1, display: {xs: 'none', sm: 'flex'}, justifyContent:'flex-end'}}>
-							{navLinks?.map((navLink) => (
+							{navigate.map((navLink) => (
 								<ButtonLink
 									key={navLink.id}
 									href={navLink.href}
@@ -77,8 +73,8 @@ const CustomAppBar: FC = () => {
 					</LinkContainer>
 				</CustomToolbar>
 			</Container>
-			<Container maxWidth={containerMaxWidth} sx={{backgroundColor: '#2C2642'}}>
-				{navLinks?.map((navLink, index) => (
+			<Container sx={{backgroundColor: '#2C2642'}}>
+				{navigate?.map((navLink, index) => (
 					<Grow
 						in={dropdownState}
 						key={navLink.id}
@@ -110,7 +106,7 @@ const CustomAppBar: FC = () => {
 				))}
 			</Container>
 		</CustomAppBarRoot>
-	)
-}
+	);
+};
 
-export default CustomAppBar
+export default CustomAppBar;

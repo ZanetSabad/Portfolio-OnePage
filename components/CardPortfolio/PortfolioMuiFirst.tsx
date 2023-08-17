@@ -1,8 +1,11 @@
-import { FC } from 'react'
-import { Box, Card, CardMedia, Typography } from '@mui/material'
-import Image from 'next/image'
-import Link from 'next/link'
-import style from '../../styles/Portfolio.module.css'
+import { FC } from 'react';
+//mui
+import { Box, Card, CardMedia, Typography } from '@mui/material';
+//next
+import Image from 'next/image';
+import Link from 'next/link';
+//css
+import style from '../../styles/Portfolio.module.css';
 
 const PortfolioMuiFirst: FC = () => {
 	return (
@@ -14,7 +17,7 @@ const PortfolioMuiFirst: FC = () => {
 				alt='Moje první portfolio'
 			/>        
 			<Card className={style.caption}>      
-				<Typography variant='h3' color='secondary.light'>Moje první portfolio</Typography>   
+				<Typography variant='h3' color='secondary.light'>Portfolio React, Material UI</Typography>   
 				<Box>     
 					<Image src='/images/logo/html.png' alt='HTML' width={60} height={60}></Image>        
 					<Image src='/images/logo/css.png' alt='CSS' width={60} height={60}></Image>               
@@ -24,7 +27,7 @@ const PortfolioMuiFirst: FC = () => {
 				<Link href='https://zaneta-sabadka.vercel.app'  target='_blank' style={{color: 'black'}}>Náhled</Link>
 			</Card>
 		</Card>
-	)
-}
+	);
+};
 
-export default PortfolioMuiFirst
+export default PortfolioMuiFirst;
